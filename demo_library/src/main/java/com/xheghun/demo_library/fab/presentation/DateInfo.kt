@@ -4,7 +4,7 @@ import android.content.Context
 import java.text.SimpleDateFormat
 import java.util.*
 
-class Cont {
+class DateInfo {
 
 
 

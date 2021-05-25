@@ -1,27 +1,30 @@
 package com.xheghun.demo_library.fab.presentation
 
-import android.content.Context
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import java.util.*
+import androidx.lifecycle.MutableLiveData
 
-class FabViewModel(context: Context) : ViewModel() {
-    private var screenContext : Context
-
-    init {
-        screenContext = context
-        //getInstallDate()
+class FabViewModel(application: Application) : AndroidViewModel(application) {
+    private val currentTime: MutableLiveData<String> by lazy {
+        MutableLiveData<String>().also {
+            DateInfo().getCurrentTime()
+        }
     }
 
-    private var currentTime : Date = Calendar.getInstance().time
-    /*private var dateInstalled : LiveData<Long> by lazy {}
-
-     fun getDateInstalled() : LiveData<Long> {
-    return dateInstalled
-     }*/
-
-    fun loadDate() {
-         screenContext.packageManager.getPackageInfo(screenContext.packageName, 0).firstInstallTime
+    private val dateInstalled: MutableLiveData<String> by lazy {
+        MutableLiveData<String>().also {
+            DateInfo().getInstalledDate(application)
+        }
     }
+
+    fun getDateInstalled() : LiveData<String> {
+        return dateInstalled
+    }
+
+    fun getCurrentTime() : LiveData<String> {
+        return currentTime
+    }
+
 
 }

@@ -10,7 +10,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.xheghun.demo_library.R
 import com.xheghun.demo_library.fab.presentation.CustomDialog
 
-class PumpFAB(act: Activity) {
+class DemoLibrary(act: Activity) {
     private var activity: Activity = act
 
     fun pumpFAB(context: Context, layoutId: Int) {
@@ -23,7 +23,7 @@ class PumpFAB(act: Activity) {
 
 
         fab.setOnClickListener {
-            CustomDialog().showDialog(context, activity)
+            CustomDialog(context, activity).show()
         }
     }
 
