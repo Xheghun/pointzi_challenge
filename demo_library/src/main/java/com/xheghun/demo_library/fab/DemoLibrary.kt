@@ -23,7 +23,7 @@ class DemoLibrary(act: Activity) {
 
 
         fab.setOnClickListener {
-            CustomDialog(context, activity).show()
+            CustomDialog(context).show()
         }
     }
 
