@@ -23,7 +23,7 @@ class PumpFAB(act: Activity) {
 
 
         fab.setOnClickListener {
-            CustomDialog().showDialog(context, activity);
+            CustomDialog().showDialog(context, activity)
         }
     }
 
