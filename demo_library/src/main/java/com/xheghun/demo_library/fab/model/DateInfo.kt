@@ -22,7 +22,7 @@ class DateInfo(mContext: Context) {
 
     fun getInstalledDate(): String {
         saveDate()
-        return format(savedD.getInstallDate(), "dd0 MMM yyyy")
+        return format(savedD.getInstallDate(), "dd MMM yyyy")
     }
 
     fun getCurrentTime() : String {
