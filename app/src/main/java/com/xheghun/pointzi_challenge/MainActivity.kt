@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 //        FabLibrary(this,R.id.main_layout).init()
-        val builder = FabLibrary.Builder()
+        FabLibrary.Builder()
 //        builder.setRoot(binding.root as ViewGroup).build()
-        builder.setActivityParams(this, R.id.main_layout).build()
+        .setActivityParams(this, R.id.main_layout).build()
     }
 }

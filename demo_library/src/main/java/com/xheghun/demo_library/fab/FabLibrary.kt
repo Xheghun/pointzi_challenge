@@ -32,7 +32,6 @@ class FabLibrary(private val rootLayout: ViewGroup) {
     fun build() {
         fab.id = View.generateViewId()
         fab.setImageResource(R.drawable.ic_add)
-
         rootLayout.addView(fab)
 
         alignFAB()
