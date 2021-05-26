@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fab_description">FAB to open dialog when clicked</string>
+    <string name="current_time">Current Time:</string>
+    <string name="library_installed">Library Installed On %1$s</string>
+    <string name="demo_time">17:04:04 06 Mar 21</string>
+</resources>
